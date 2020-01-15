@@ -1,0 +1,16 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFA_ALV_SMARTFORMS_TOP
+*&---------------------------------------------------------------------*
+TYPE-POOLS slis.
+
+TABLES : zfa_mara.
+
+DATA: gt_mara TYPE TABLE OF zfa_mara,
+      ls_layout TYPE slis_layout_alv,
+      it_fieldcat TYPE slis_t_fieldcat_alv,
+      answer(1) TYPE c.
+
+
+DATA: lv_fmname TYPE rs38l_fnam,
+      lv_fname TYPE tdsfname.
+lv_fname = 'ZFA_MARA_SMARTFORMS'.

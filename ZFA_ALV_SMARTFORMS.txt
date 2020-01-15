@@ -1,0 +1,25 @@
+*ls_layout-box_fieldname     = 'SEL'.
+
+REPORT zfa_alv_smartforms.
+
+
+INCLUDE : zfa_alv_smartforms_top.
+INCLUDE : zfa_alv_smartforms_scrn.
+INCLUDE : zfa_alv_smartforms_f01.
+INCLUDE : zfa_alv_smartforms_alv.
+
+
+AT SELECTION-SCREEN.
+
+
+AT SELECTION-SCREEN OUTPUT.
+*  PERFORM modify_screen.
+
+*AT SELECTION-SCREEN ON VALUE-REQUEST FOR s_ad.
+*   PERFORM CHANGE_NAME.
+
+START-OF-SELECTION.
+  PERFORM get_data.
+
+END-OF-SELECTION.
+  PERFORM display.

@@ -1,0 +1,18 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFA_ALV_SMARTFORMS_F01
+*&---------------------------------------------------------------------*
+FORM get_data.
+  SELECT matnr
+         ersda
+         ernam
+         laeda
+         aenam
+         vpsta FROM zfa_mara
+    INTO CORRESPONDING FIELDS OF TABLE gt_mara " CORRESPONDING FIELDS OF önemli
+    WHERE zfa_mara~matnr IN s_matnr
+       AND zfa_mara~ersda IN s_ersda
+       AND zfa_mara~ernam IN s_ernam
+       AND zfa_mara~laeda IN s_laeda
+       AND zfa_mara~aenam IN s_aenam
+       AND zfa_mara~vpsta IN s_vpsta.
+ENDFORM.

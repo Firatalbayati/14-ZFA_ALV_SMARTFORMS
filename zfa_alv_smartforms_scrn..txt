@@ -1,0 +1,11 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFA_ALV_SMARTFORMS_SCRN
+*&---------------------------------------------------------------------*
+SELECTION-SCREEN BEGIN OF BLOCK  b1 WITH FRAME TITLE text-001.
+SELECT-OPTIONS : s_matnr FOR zfa_mara-matnr NO-EXTENSION,
+                 s_ersda FOR zfa_mara-ersda NO-EXTENSION,
+                 s_ernam FOR zfa_mara-ernam NO-EXTENSION,
+                 s_laeda FOR zfa_mara-laeda NO-EXTENSION,
+                 s_aenam FOR zfa_mara-aenam NO-EXTENSION,
+                 s_vpsta FOR zfa_mara-vpsta NO-EXTENSION.
+SELECTION-SCREEN END OF BLOCK b1.
